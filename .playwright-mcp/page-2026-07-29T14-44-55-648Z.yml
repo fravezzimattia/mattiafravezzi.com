@@ -1,0 +1,135 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e3]:
+    - navigation [ref=f8e6]:
+      - link "Internet Archive logo A line drawing of the Internet Archive headquarters building façade." [ref=f8e8] [cursor=pointer]:
+        - /url: https://archive.org/
+        - img "Internet Archive logo A line drawing of the Internet Archive headquarters building façade." [ref=f8e9]
+      - navigation [ref=f8e34]:
+        - generic [ref=f8e35]:
+          - link [ref=f8e36] [cursor=pointer]:
+            - /url: https://web.archive.org
+            - img "Web icon An illustration of a computer application window" [ref=f8e38]
+            - text: web
+          - link "Texts icon An illustration of an open book. Texts" [ref=f8e40] [cursor=pointer]:
+            - /url: https://archive.org/details/texts
+            - img "Texts icon An illustration of an open book." [ref=f8e42]
+            - generic [ref=f8e43]: Texts
+          - link "Video icon An illustration of two cells of a film strip. Video" [ref=f8e44] [cursor=pointer]:
+            - /url: https://archive.org/details/movies
+            - img "Video icon An illustration of two cells of a film strip." [ref=f8e46]
+            - generic [ref=f8e48]: Video
+          - link "Audio icon An illustration of an audio speaker. Audio" [ref=f8e49] [cursor=pointer]:
+            - /url: https://archive.org/details/audio
+            - img "Audio icon An illustration of an audio speaker." [ref=f8e51]
+            - generic [ref=f8e56]: Audio
+          - link "Software icon An illustration of a 3.5\" floppy disk. Software" [ref=f8e57] [cursor=pointer]:
+            - /url: https://archive.org/details/software
+            - img "Software icon An illustration of a 3.5\" floppy disk." [ref=f8e59]
+            - generic [ref=f8e60]: Software
+          - link "Images icon An illustration of two photographs. Images" [ref=f8e61] [cursor=pointer]:
+            - /url: https://archive.org/details/image
+            - img "Images icon An illustration of two photographs." [ref=f8e63]
+            - generic [ref=f8e65]: Images
+      - generic [ref=f8e66]:
+        - search [ref=f8e68]:
+          - generic [ref=f8e69]:
+            - button "Toggle options All" [ref=f8e73] [cursor=pointer]:
+              - generic [ref=f8e74]: Toggle options
+              - generic [ref=f8e75]: All
+            - generic [ref=f8e83]:
+              - generic [ref=f8e84]: Search the Archive. Filters and Advanced Search available below.
+              - textbox "Search the Archive. Filters and Advanced Search available below." [ref=f8e85]:
+                - /placeholder: Search
+            - button "Search" [ref=f8e86] [cursor=pointer]
+        - generic [ref=f8e89]:
+          - button "Toggle login menu" [ref=f8e90] [cursor=pointer]:
+            - img "User icon An illustration of a person's head and chest." [ref=f8e91]
+          - generic [ref=f8e93]:
+            - link "Sign up" [ref=f8e94] [cursor=pointer]:
+              - /url: https://archive.org/signup
+            - text: "|"
+            - link "Log in" [ref=f8e95] [cursor=pointer]:
+              - /url: https://archive.org/account/login
+        - link "Upload icon An illustration of a horizontal line over an up pointing arrow. Upload" [ref=f8e96] [cursor=pointer]:
+          - /url: https://archive.org/upload
+          - img "Upload icon An illustration of a horizontal line over an up pointing arrow." [ref=f8e97]
+          - text: Upload
+    - navigation [ref=f8e101]:
+      - list [ref=f8e102]:
+        - listitem [ref=f8e103]:
+          - link [ref=f8e104] [cursor=pointer]:
+            - /url: https://archive.org/signup
+            - text: Sign up for free
+        - listitem [ref=f8e105]:
+          - link [ref=f8e106] [cursor=pointer]:
+            - /url: https://archive.org/account/login
+            - text: Log in
+    - list [ref=f8e108]:
+      - listitem [ref=f8e109]:
+        - link "About" [ref=f8e110] [cursor=pointer]:
+          - /url: https://archive.org/about/
+      - listitem [ref=f8e111]:
+        - link "Blog" [ref=f8e112] [cursor=pointer]:
+          - /url: https://blog.archive.org
+      - listitem [ref=f8e113]:
+        - link "Events" [ref=f8e114] [cursor=pointer]:
+          - /url: https://archive.org/events
+      - listitem [ref=f8e115]:
+        - link "Projects" [ref=f8e116] [cursor=pointer]:
+          - /url: https://archive.org/projects/
+      - listitem [ref=f8e117]:
+        - link "Help" [ref=f8e118] [cursor=pointer]:
+          - /url: https://archive.org/about/faqs.php
+      - listitem [ref=f8e119]:
+        - link "Donate Donate icon An illustration of a heart shape" [ref=f8e120] [cursor=pointer]:
+          - /url: https://archive.org/donate?origin=iawww-TopNavDonateButton
+          - text: Donate
+          - img "Donate icon An illustration of a heart shape" [ref=f8e121]
+      - listitem [ref=f8e122]:
+        - link "Contact" [ref=f8e123] [cursor=pointer]:
+          - /url: https://archive.org/about/contact
+      - listitem [ref=f8e124]:
+        - link "Jobs" [ref=f8e125] [cursor=pointer]:
+          - /url: https://archive.org/about/jobs
+      - listitem [ref=f8e126]:
+        - link "Volunteer" [ref=f8e127] [cursor=pointer]:
+          - /url: https://archive.org/about/volunteer-positions
+  - generic [ref=f8e128]:
+    - generic [ref=f8e129]:
+      - link "DONATE" [ref=f8e132] [cursor=pointer]:
+        - /url: http://archive.org/donate/?origin=wbwww-CalndrDonateButton
+      - link [ref=f8e135] [cursor=pointer]:
+        - /url: /
+    - generic [ref=f8e138]:
+      - generic [ref=f8e140]:
+        - textbox [ref=f8e141]: http://hub-e.com/about-us
+        - button "Latest" [ref=f8e142] [cursor=pointer]
+        - button "Show All" [ref=f8e143] [cursor=pointer]
+      - generic [ref=f8e144]:
+        - generic [ref=f8e145]: The Wayback Machine has not archived that URL.
+        - paragraph [ref=f8e147]:
+          - text: Click here to search for all archived pages under
+          - link "http://hub-e.com/" [ref=f8e148] [cursor=pointer]:
+            - /url: https://web.archive.org/web/*/http://hub-e.com/*
+          - text: .
+  - contentinfo [ref=f8e149]:
+    - generic [ref=f8e150]:
+      - paragraph [ref=f8e151]:
+        - text: The Wayback Machine is an initiative of the
+        - link "Internet Archive" [ref=f8e152] [cursor=pointer]:
+          - /url: //archive.org/
+        - text: ", a 501(c)(3) non-profit, building a digital library of Internet sites and other cultural artifacts in digital form. Other"
+        - link "projects" [ref=f8e153] [cursor=pointer]:
+          - /url: //archive.org/projects/
+        - text: include
+        - link "Open Library" [ref=f8e154] [cursor=pointer]:
+          - /url: https://openlibrary.org/
+        - text: "&"
+        - link "archive-it.org" [ref=f8e155] [cursor=pointer]:
+          - /url: https://archive-it.org
+        - text: .
+      - paragraph [ref=f8e156]:
+        - text: Your use of the Wayback Machine is subject to the Internet Archive's
+        - link "Terms of Use" [ref=f8e157] [cursor=pointer]:
+          - /url: //archive.org/about/terms.php
+        - text: .

@@ -1,0 +1,37 @@
+- generic [ref=f5e3]:
+  - banner [ref=f5e4]:
+    - generic [ref=f5e5]:
+      - link [ref=f5e7] [cursor=pointer]:
+        - /url: /web/20140101063816/http://hub-e.com/
+        - img "Logo Hub Engineering" [ref=f5e8]
+      - heading "Cloud Computing for Civil Engineering and more" [level=3] [ref=f5e10]
+      - generic [ref=f5e11]: Sign in
+  - generic [ref=f5e19]:
+    - heading "How HUB-e works:" [level=1] [ref=f5e22]
+    - link "Sign in" [ref=f5e27] [cursor=pointer]:
+      - /url: "#"
+  - contentinfo [ref=f5e28]:
+    - generic [ref=f5e29]:
+      - navigation [ref=f5e30]:
+        - list [ref=f5e31]:
+          - listitem [ref=f5e32]:
+            - link "About us" [ref=f5e33] [cursor=pointer]:
+              - /url: /web/20140101063816/http://hub-e.com/about-us
+          - listitem [ref=f5e34]:
+            - link "Services" [ref=f5e35] [cursor=pointer]:
+              - /url: /web/20140101063816/http://hub-e.com/services
+          - listitem [ref=f5e36]:
+            - link "Contact" [ref=f5e37] [cursor=pointer]:
+              - /url: /web/20140101063816/http://hub-e.com/contact
+      - navigation
+    - generic [ref=f5e38]:
+      - link [ref=f5e39] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20140101063816/http://www.greenprefab.com/
+        - img "Green Prefab Italia" [ref=f5e40]
+      - link [ref=f5e41] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20140101063816/http://www.venus-c.eu/
+        - img "Venus-c" [ref=f5e42]
+    - generic [ref=f5e43]:
+      - text: © Copyright 2012 Green Prefab -
+      - link "Privacy Policy" [ref=f5e44] [cursor=pointer]:
+        - /url: /web/20140101063816/http://hub-e.com/privacy

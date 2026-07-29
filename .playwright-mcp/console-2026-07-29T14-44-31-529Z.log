@@ -1,0 +1,28 @@
+[     334ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://web.archive.org/web/20160306002323/http://web.archive.org/screenshot/http://justagirlandherpups.com/:0
+[     888ms] TypeError: $menu.on is not a function
+    at applyHandlers (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/sites/all/themes/multipurpose/js/plugins.js?nysa43:28:213)
+    at HTMLUListElement.<anonymous> (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/sites/all/themes/multipurpose/js/plugins.js?nysa43:33:495)
+    at t.Function.call (https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK:21:54745)
+    at b.each (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/misc/jquery.js?v=1.4.4:43:46)
+    at $.fn.init.each (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/misc/jquery.js?v=1.4.4:36:388)
+    at $.fn.init.init (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/sites/all/themes/multipurpose/js/plugins.js?nysa43:33:181)
+    at t.Function.apply (https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK:21:54338)
+    at $.fn.superfish (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/sites/all/themes/multipurpose/js/plugins.js?nysa43:34:276)
+    at Proxy.<anonymous> (https://web.archive.org/web/20160306002323js_/http://justagirlandherpups.com/sites/all/themes/multipurpose/js/global.js?nysa43:16:24)
+    at t.Function.call (https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK:21:54745)
+[    2388ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://web.archive.org/web/20140520002714cs_/http://hub-e.com/templates/hub-e/css/nature.css:0
+[    2438ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://web.archive.org/web/20140519234044cs_/http://hub-e.com/templates/hub-e/css/layout.css:0
+[    3243ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://web.archive.org/web/20140519233634cs_/http://hub-e.com/templates/hub-e/css/position.css:0
+[    5531ms] TypeError: Cannot read properties of null (reading 'set')
+    at addControls (https://web.archive.org/web/20140101063816js_/http://hub-e.com/templates/hub-e/javascript/md_stylechanger.js:75:12)
+    at t.Function.apply (https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK:21:54338)
+    at https://web.archive.org/web/20140101063816js_/http://hub-e.com/media/system/js/mootools-core.js:384:9
+    at Array.forEach (<anonymous>)
+    at t.Function.apply (https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK:21:54338)
+    at Array.forEach (https://web.archive.org/web/20140101063816js_/http://hub-e.com/media/system/js/mootools-core.js:42:216)
+    at Array.each (https://web.archive.org/web/20140101063816js_/http://hub-e.com/media/system/js/mootools-core.js:49:175)
+    at Proxy.fireEvent (https://web.archive.org/web/20140101063816js_/http://hub-e.com/media/system/js/mootools-core.js:383:126)
+    at HTMLDocument.g (https://web.archive.org/web/20140101063816js_/http://hub-e.com/media/system/js/mootools-core.js:523:27)
+[    5501ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://web.archive.org/web/20140101063816/http://hub-e.com/:0
+[    6022ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://web.archive.org/web/20140101063816/http://web.archive.org/screenshot/http://hub-e.com/:0
+[    6274ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://web.archive.org/web/20140519230749/http://hub-e.com/images/template/header.png:0

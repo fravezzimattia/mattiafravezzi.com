@@ -1,0 +1,145 @@
+- generic [active] [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - navigation "Page Header" [ref=f10e3]:
+      - link "Google Play logo" [ref=f10e4] [cursor=pointer]:
+        - /url: /store/games
+        - generic [ref=f10e12]: google_logo Play
+      - combobox [ref=f10e14]:
+        - generic [ref=f10e16]:
+          - generic [ref=f10e17]: search
+          - textbox "Search Google Play" [ref=f10e19]:
+            - /placeholder: Search for apps & games
+            - text: FoxTour
+          - generic [ref=f10e20]: clear
+      - generic [ref=f10e22]:
+        - button "Help Center" [ref=f10e24] [cursor=pointer]:
+          - generic [ref=f10e25]: help_outline
+        - button "Open account menu" [ref=f10e30] [cursor=pointer]
+  - generic [ref=f10e34]:
+    - list [ref=f10e38]:
+      - listitem [ref=f10e39]:
+        - link "Apps & games" [ref=f10e40] [cursor=pointer]:
+          - /url: /store/search?q=FoxTour&c=apps
+      - listitem [ref=f10e44]:
+        - link "Books" [ref=f10e45] [cursor=pointer]:
+          - /url: /store/search?q=FoxTour&c=books
+    - generic [ref=f10e49]:
+      - button "About these results" [ref=f10e56]:
+        - generic [ref=f10e60]: info_outline
+      - generic [ref=f10e67]:
+        - listitem [ref=f10e68]:
+          - link "Fox World Travel Fox World Travel" [ref=f10e73] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.foxworldtravel.guides
+            - generic [ref=f10e79]:
+              - generic [ref=f10e80]: Fox World Travel
+              - generic [ref=f10e82]: Fox World Travel
+        - listitem [ref=f10e84]:
+          - link "FOX Transport fox transport" [ref=f10e89] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.ogtech.fox_transport
+            - generic [ref=f10e95]:
+              - generic [ref=f10e96]: FOX Transport
+              - generic [ref=f10e98]: fox transport
+        - listitem [ref=f10e100]:
+          - link "Fox Italy s.r.l. Half Pocket" [ref=f10e105] [cursor=pointer]:
+            - /url: /store/apps/details?id=app.foxitaly.com
+            - generic [ref=f10e111]:
+              - generic [ref=f10e112]: Fox Italy s.r.l.
+              - generic [ref=f10e114]: Half Pocket
+        - listitem [ref=f10e116]:
+          - link "Foxtrot Mobile Descartes Intl." [ref=f10e121] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.descartes.foxtrot
+            - generic [ref=f10e127]:
+              - generic [ref=f10e128]: Foxtrot Mobile
+              - generic [ref=f10e130]: Descartes Intl.
+        - listitem [ref=f10e132]:
+          - link "TourTailors TourTailors" [ref=f10e137] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.tourtailors.tourtailors
+            - generic [ref=f10e143]:
+              - generic [ref=f10e144]: TourTailors
+              - generic [ref=f10e146]: TourTailors
+        - listitem [ref=f10e148]:
+          - link "Foxtrot Francesco Gorini" [ref=f10e153] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.francescogorini.foxtrot
+            - generic [ref=f10e159]:
+              - generic [ref=f10e160]: Foxtrot
+              - generic [ref=f10e162]: Francesco Gorini
+        - listitem [ref=f10e164]:
+          - link "Foxt Foxt Inc" [ref=f10e169] [cursor=pointer]:
+            - /url: /store/apps/details?id=mn.foxt
+            - generic [ref=f10e175]:
+              - generic [ref=f10e176]: Foxt
+              - generic [ref=f10e178]: Foxt Inc
+        - listitem [ref=f10e180]:
+          - link "Play The Fox in the Forest The Fox in the Forest Dire Wolf Digital €4.19" [ref=f10e185] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.direwolfdigital.thefoxintheforest
+            - button "Play The Fox in the Forest" [ref=f10e190]
+            - generic [ref=f10e197]:
+              - generic [ref=f10e198]: The Fox in the Forest
+              - generic [ref=f10e200]: Dire Wolf Digital
+              - generic [ref=f10e202]: €4.19
+        - listitem [ref=f10e204]:
+          - link "FoxtInn Suvysoft" [ref=f10e209] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.foxtcon.foxtinn
+            - generic [ref=f10e215]:
+              - generic [ref=f10e216]: FoxtInn
+              - generic [ref=f10e218]: Suvysoft
+        - listitem [ref=f10e220]:
+          - link "FoxSwitch lucasharmony" [ref=f10e225] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.whmt.foxswitchapp
+            - generic [ref=f10e231]:
+              - generic [ref=f10e232]: FoxSwitch
+              - generic [ref=f10e234]: lucasharmony
+        - listitem [ref=f10e236]:
+          - link "FOXIZZ - Transfers, excursions ODAK Group" [ref=f10e241] [cursor=pointer]:
+            - /url: /store/apps/details?id=com.foxizz.user
+            - generic [ref=f10e247]:
+              - generic [ref=f10e248]: FOXIZZ - Transfers, excursions
+              - generic [ref=f10e250]: ODAK Group
+  - contentinfo [ref=f10e253]:
+    - generic [ref=f10e255]:
+      - generic [ref=f10e257]:
+        - text: Google Play
+        - link [ref=f10e259] [cursor=pointer]:
+          - /url: /store/pass/getstarted
+          - paragraph [ref=f10e260]: Play Pass
+        - link [ref=f10e262] [cursor=pointer]:
+          - /url: /store/points/enroll
+          - paragraph [ref=f10e263]: Play Points
+        - link [ref=f10e265] [cursor=pointer]:
+          - /url: https://play.google.com/about/giftcards
+          - paragraph [ref=f10e266]: Gift cards
+        - link [ref=f10e268] [cursor=pointer]:
+          - /url: /redeem
+          - paragraph [ref=f10e269]: Redeem
+        - link [ref=f10e271] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/answer/134336
+          - paragraph [ref=f10e272]: Refund policy
+      - generic [ref=f10e274]:
+        - text: Kids & family
+        - link [ref=f10e276] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay?p=pff_parentguide
+          - paragraph [ref=f10e277]: Parent Guide
+        - link [ref=f10e279] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/answer/7007852
+          - paragraph [ref=f10e280]: Family sharing
+    - generic [ref=f10e281]:
+      - link [ref=f10e283] [cursor=pointer]:
+        - /url: https://play.google.com/intl/en_it/about/play-terms.html
+        - paragraph [ref=f10e284]: Terms of Service
+      - link [ref=f10e286] [cursor=pointer]:
+        - /url: https://policies.google.com/privacy
+        - paragraph [ref=f10e287]: Privacy
+      - link [ref=f10e289] [cursor=pointer]:
+        - /url: https://support.google.com/googleplay/contact/withdrawal_form
+        - paragraph [ref=f10e290]: Withdraw from Digital Services
+      - link [ref=f10e292] [cursor=pointer]:
+        - /url: https://support.google.com/googleplay/?p=about_play
+        - paragraph [ref=f10e293]: About Google Play
+      - link [ref=f10e295] [cursor=pointer]:
+        - /url: http://developer.android.com/index.html
+        - paragraph [ref=f10e296]: Developers
+      - link [ref=f10e298] [cursor=pointer]:
+        - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+        - paragraph [ref=f10e299]: Google Store
+      - generic [ref=f10e300]: All prices include VAT.
+      - button "Italy (English)" [ref=f10e302]
