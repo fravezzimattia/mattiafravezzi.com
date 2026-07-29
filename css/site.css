@@ -1,0 +1,108 @@
+/* mattiafravezzi.com — B2 "Notte e alba". Dark-only by design. */
+:root {
+  --bg: #0c1322;
+  --bg-alt: #0e1526;
+  --card: #131a2c;
+  --border: #1c2436;
+  --text: #f8fafc;
+  --text-2: #e2e8f0;
+  --body: #9aa5b8;
+  --muted: #5b6b85;
+  --accent: #fb923c;
+  --accent-soft: #fdba74;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--body); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+.container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 96px 0; border-top: 1px solid var(--border); }
+.section-alt { background: var(--bg-alt); }
+
+h1, h2 { color: var(--text); font-weight: 750; letter-spacing: -.035em; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.2rem); line-height: 1.15; margin-bottom: 18px; }
+h3 { color: var(--text-2); font-weight: 650; }
+a { color: var(--accent-soft); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.eyebrow { font-family: var(--mono); font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+.accent { color: var(--accent); }
+.muted { color: var(--muted); font-size: .9rem; margin-top: 14px; }
+.section-body { max-width: 560px; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero .container { position: relative; width: 100%; padding-top: 96px; padding-bottom: 140px; }
+.hero h1 { font-size: clamp(3rem, 9vw, 5.2rem); line-height: .95; }
+.lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); margin-top: 22px; max-width: 480px; }
+.cta-row { margin-top: 34px; display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+.btn { display: inline-block; background: var(--accent); color: #131a2c; font-weight: 600; font-size: .92rem; padding: 13px 24px; border-radius: 6px; }
+.btn:hover, .btn:focus-visible { background: var(--accent-soft); text-decoration: none; }
+.link { color: var(--body); border-bottom: 1px solid rgba(251, 146, 60, .4); padding-bottom: 3px; font-size: .92rem; }
+.link:hover { color: var(--text-2); text-decoration: none; }
+
+/* ---------- Now ---------- */
+.now-grid { display: grid; grid-template-columns: 1fr 220px; gap: 44px; align-items: start; }
+.now-grid p { margin-top: 16px; }
+.now-grid strong { color: var(--text-2); font-weight: 600; }
+.portrait { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.tags li { font-family: var(--mono); font-size: .72rem; color: var(--accent-soft); border: 1px solid rgba(251, 146, 60, .2); padding: 5px 10px; border-radius: 4px; }
+
+/* ---------- Cards (MountainMaps features + Community) ---------- */
+.feature-cards, .comm-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+.card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; color: var(--body); }
+.card span { font-size: 1.3rem; }
+.card h3 { font-size: .95rem; margin-top: 8px; }
+.card p { font-size: .85rem; margin-top: 8px; line-height: 1.6; }
+a.card:hover { border-color: rgba(251, 146, 60, .45); text-decoration: none; }
+.press { margin-top: 28px; font-size: .8rem; color: var(--muted); }
+.press span { color: var(--body); }
+.more-link { display: inline-block; margin-top: 16px; font-weight: 600; }
+
+/* ---------- Timeline ---------- */
+.timeline { list-style: none; margin-top: 34px; border-left: 2px solid var(--border); }
+.tl-item { display: grid; grid-template-columns: 6rem 1fr; column-gap: 22px; padding: 15px 0 15px 26px; position: relative; }
+.tl-item::before { content: ""; position: absolute; left: -5px; top: 24px; width: 8px; height: 8px; border-radius: 50%; background: #38465e; }
+.tl-year, .tl-title { line-height: 1.45; }
+.tl-year { font-family: var(--mono); font-size: .8rem; color: var(--muted); white-space: nowrap; padding-top: .18em; }
+.tl-title { font-size: 1rem; }
+.tl-desc { font-size: .88rem; margin-top: 6px; line-height: 1.65; }
+.tl-current { border-left: 2px solid var(--accent); margin-left: -2px; }
+.tl-current::before { background: var(--accent); left: -6px; width: 10px; height: 10px; top: 23px; }
+.tl-current .tl-year { color: var(--accent-soft); }
+.tl-current .tl-title { color: var(--text); }
+
+/* ---------- Contact / footer ---------- */
+.contact { position: relative; overflow: hidden; text-align: center; padding-bottom: 120px; }
+.contact-ridge { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 180px; opacity: .55; }
+.contact .container { position: relative; }
+.contact .section-body { margin: 0 auto 8px; }
+.contact .btn { margin-top: 18px; }
+.socials { margin-top: 26px; font-size: .9rem; }
+.socials a { color: var(--body); }
+footer { border-top: 1px solid var(--border); padding: 26px 0; }
+.footer-note { font-family: var(--mono); font-size: .68rem; color: var(--muted); text-align: center; }
+
+/* ---------- Reveal on scroll (JS adds .revealed) ---------- */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.revealed { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .section { padding: 68px 0; }
+  .now-grid { grid-template-columns: 1fr; }
+  .portrait { max-width: 220px; }
+  .feature-cards, .comm-cards { grid-template-columns: 1fr; }
+  .tl-item { grid-template-columns: 4.6rem 1fr; column-gap: 14px; padding-left: 20px; }
+  .hero .container { padding-bottom: 110px; }
+}
