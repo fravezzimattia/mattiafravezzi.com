@@ -15,7 +15,7 @@
 <div>
   <p class="code">400</p>
   <h1>Wrong turn.</h1>
-  <p>This path doesn&rsquo;t exist — <a href="/">head back to base camp</a>.</p>
+  <p>That request didn&rsquo;t parse — <a href="/">head back to base camp</a>.</p>
 </div>
 </body>
 </html>

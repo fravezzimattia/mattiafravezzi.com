@@ -15,7 +15,7 @@
 <div>
   <p class="code">500</p>
   <h1>Rockslide on the server.</h1>
-  <p>This path doesn&rsquo;t exist — <a href="/">head back to base camp</a>.</p>
+  <p>Something broke on our side — give it a minute, then <a href="/">head back to base camp</a>.</p>
 </div>
 </body>
 </html>
