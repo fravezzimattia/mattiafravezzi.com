@@ -12,4 +12,9 @@ RewriteEngine on
 RewriteEngine On
 RewriteRule ^_legacy(/|$) - [F]
 # Block internal folders
-RewriteRule ^(docs|\.superpowers)(/|$) - [F]
+RewriteRule ^(docs|\.superpowers|\.playwright-mcp)(/|$) - [F]
+
+ErrorDocument 400 /400.shtml
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 500 /500.shtml

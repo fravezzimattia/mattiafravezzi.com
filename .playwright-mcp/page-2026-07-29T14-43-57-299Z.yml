@@ -1,3 +1,0 @@
-- generic [active] [ref=e1]:
-  - heading "429 Too Many Requests" [level=1] [ref=e2]
-  - text: You have sent too many requests in a given amount of time.
