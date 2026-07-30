@@ -35,4 +35,4 @@ Mind the dotfiles (`.htaccess`, `.well-known/`) — most FTP clients hide them b
 
 ## License
 
-Code is free to reuse. Content, copy and images © Mattia Fravezzi.
+© Mattia Fravezzi. All rights reserved — code, content, copy and images.
