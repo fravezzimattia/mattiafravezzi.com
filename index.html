@@ -40,6 +40,7 @@
   ]
 }
 </script>
+<script>try{if(localStorage.getItem('theme')==='dawn')document.documentElement.classList.add('dawn')}catch(e){}</script>
 </head>
 <body>
 
@@ -47,14 +48,14 @@
   <svg class="hero-bg" viewBox="0 0 1440 800" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
     <defs>
       <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#0c1322"/>
-        <stop offset="75%" stop-color="#141b2e"/>
-        <stop offset="100%" stop-color="#2a1f24"/>
+        <stop class="sky-0" offset="0%"/>
+        <stop class="sky-1" offset="75%"/>
+        <stop class="sky-2" offset="100%"/>
       </linearGradient>
     </defs>
     <rect width="1440" height="800" fill="url(#sky)"/>
-    <path d="M-40,800 L240,610 L500,745 L840,520 L1120,690 L1480,570 L1480,800 Z" fill="#0a0f1a" opacity=".9"/>
-    <path d="M-40,800 L360,670 L680,790 L1040,615 L1480,750 L1480,800 Z" fill="#070b12"/>
+    <path class="ridge-1" d="M-40,800 L240,610 L500,745 L840,520 L1120,690 L1480,570 L1480,800 Z" opacity=".9"/>
+    <path class="ridge-2" d="M-40,800 L360,670 L680,790 L1040,615 L1480,750 L1480,800 Z"/>
   </svg>
   <div class="hero-moon" aria-hidden="true">
     <svg viewBox="0 0 100 100">
@@ -62,6 +63,11 @@
       <circle cx="36" cy="58" r="13" fill="#d9cfbb"/>
       <circle cx="63" cy="64" r="7" fill="#d9cfbb"/>
       <circle cx="58" cy="32" r="5.5" fill="#d9cfbb"/>
+    </svg>
+  </div>
+  <div class="hero-sun" aria-hidden="true">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="49" fill="#fdba74"/>
     </svg>
   </div>
   <div class="container">
@@ -190,7 +196,7 @@
 
   <section id="contact" class="section contact">
     <svg class="contact-ridge" viewBox="0 0 1440 240" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <path d="M-40,240 L280,150 L620,205 L980,120 L1480,195 L1480,240 Z" fill="#070b12"/>
+      <path class="ridge-2" d="M-40,240 L280,150 L620,205 L980,120 L1480,195 L1480,240 Z"/>
     </svg>
     <div class="container">
       <p class="eyebrow">05 — Contact</p>

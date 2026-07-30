@@ -1,4 +1,5 @@
-/* mattiafravezzi.com — B2 "Notte e alba". Dark-only by design. */
+/* mattiafravezzi.com — B2 "Notte e alba". Night by default; the dawn theme is an
+   easter egg (triple-click the moon), so there is no theme UI anywhere else. */
 :root {
   --bg: #0c1322;
   --bg-alt: #0e1526;
@@ -10,9 +11,38 @@
   --muted: #5b6b85;
   --accent: #fb923c;
   --accent-soft: #fdba74;
+  --sky-0: #0c1322;
+  --sky-1: #141b2e;
+  --sky-2: #2a1f24;
+  --ridge-1: #0a0f1a;
+  --ridge-2: #070b12;
+  --tl-dot: #38465e;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
+.dawn {
+  --bg: #f7f4ee;
+  --bg-alt: #f1ede4;
+  --card: #fbf9f5;
+  --border: #e2dccd;
+  --text: #1c2436;
+  --text-2: #2c3a52;
+  --body: #4a566b;
+  --muted: #6b7688;
+  --accent: #b45309;
+  --accent-soft: #92400e;
+  --sky-0: #9cbede;
+  --sky-1: #ecd0b0;
+  --sky-2: #f7bf8a;
+  --ridge-1: #33415e;
+  --ridge-2: #243149;
+  --tl-dot: #b9c0cd;
+}
+.sky-0 { stop-color: var(--sky-0); }
+.sky-1 { stop-color: var(--sky-1); }
+.sky-2 { stop-color: var(--sky-2); }
+.ridge-1 { fill: var(--ridge-1); }
+.ridge-2 { fill: var(--ridge-2); }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -37,18 +67,69 @@ a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3p
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
-/* Moon lives outside the sliced SVG: same scale/position math as its xMaxYMax-slice
-   (glow r60 at 290,590 from bottom-right of the 1440×800 box, hero ≈ 88vh), but the
-   top clamp keeps it inside the hero on ultra-wide screens where the slice crop
-   would push it above the viewport. */
-.hero-moon { position: absolute; width: calc(2 * max(4.1667vw, 6.6vh)); aspect-ratio: 1; right: calc(max(20.139vw, 31.9vh) - max(4.1667vw, 6.6vh)); top: max(calc(100% - max(40.972vw, 64.9vh) - max(4.1667vw, 6.6vh)), 60px); background: radial-gradient(circle closest-side, rgba(251, 146, 60, .1) 0 100%, transparent 100%); pointer-events: none; }
-.hero-moon svg { position: absolute; inset: 0; margin: auto; width: 43%; height: 43%; opacity: .7; }
+/* Moon and sun live outside the sliced SVG: same scale/position math as its
+   xMaxYMax-slice (glow r60 at 290,590 from bottom-right of the 1440×800 box,
+   hero ≈ 88vh), but the top clamp keeps them inside the hero on ultra-wide screens
+   where the slice crop would push them above the viewport. */
+.hero-moon, .hero-sun { position: absolute; width: calc(2 * max(4.1667vw, 6.6vh)); aspect-ratio: 1; right: calc(max(20.139vw, 31.9vh) - max(4.1667vw, 6.6vh)); top: max(calc(100% - max(40.972vw, 64.9vh) - max(4.1667vw, 6.6vh)), 60px); background: radial-gradient(circle closest-side, rgba(251, 146, 60, .1) 0 100%, transparent 100%); }
+.hero-moon svg, .hero-sun svg { position: absolute; inset: 0; margin: auto; width: 43%; height: 43%; }
+.hero-moon svg { opacity: .7; }
+.hero-sun { background: radial-gradient(circle closest-side, rgba(251, 146, 60, .22) 0 100%, transparent 100%); }
+/* Only the active body is visible and clickable (visibility gates pointer events).
+   Stage rule: whatever enters glides in from the LEFT edge, whatever leaves exits
+   at the RIGHT edge — both at mid-height, so the flight stays above the ridges and
+   behind the hero text (the .container comes later in the DOM and paints on top).
+   Parked spots = last exit position. */
+.hero-sun { visibility: hidden; opacity: 0; transform: translate(30vw, 34vh); }
+.dawn .hero-sun { visibility: visible; opacity: 1; transform: none; }
+.dawn .hero-moon { visibility: hidden; opacity: 0; transform: translate(30vw, 34vh); }
+
+/* ---------- Easter egg: dawn/dusk progression ---------- */
+/* .dawn-anim / .dusk-anim are set by JS for ~3.2s around the theme flip; the
+   keyframes' "both" fill bridges into the static .dawn / night states above. */
+.dawn-anim .hero-moon { animation: moon-set 5s linear both; visibility: visible; }
+.dawn-anim .hero-sun { animation: sun-rise 5s linear both; visibility: visible; }
+.dusk-anim .hero-moon { animation: moon-rise 5s linear both; visibility: visible; }
+.dusk-anim .hero-sun { animation: sun-set 5s linear both; visibility: visible; }
+/* Straight, constant-speed flights at mid-height: in from the left edge up to the
+   resting spot, out toward the right edge — always above the ridges. */
+@keyframes moon-set {
+  0% { transform: none; opacity: 1; }
+  75% { opacity: 1; }
+  100% { transform: translate(30vw, 34vh); opacity: 0; }
+}
+@keyframes moon-rise {
+  0% { transform: translate(-88vw, 34vh); opacity: 0; }
+  8% { opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes sun-rise {
+  0% { transform: translate(-88vw, 34vh); opacity: 0; }
+  8% { opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes sun-set {
+  0% { transform: none; opacity: 1; }
+  75% { opacity: 1; }
+  100% { transform: translate(30vw, 34vh); opacity: 0; }
+}
+/* Slow crossfade of every themed surface while the sky turns; JS removes the
+   class when the progression ends. stop-color covers the inline-SVG sky. */
+.theme-fade, .theme-fade *, .theme-fade svg * { transition: background-color 4.5s ease, color 4.5s ease, border-color 4.5s ease, fill 4.5s ease, stop-color 4.5s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .dawn-anim .hero-moon, .dawn-anim .hero-sun, .dusk-anim .hero-moon, .dusk-anim .hero-sun { animation: none; }
+  .theme-fade, .theme-fade *, .theme-fade svg * { transition: none; }
+}
 .hero .container { position: relative; width: 100%; padding-top: 96px; padding-bottom: 140px; }
 .hero h1 { font-size: clamp(3rem, 9vw, 5.2rem); line-height: .95; }
 .lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); margin-top: 22px; max-width: 480px; }
 .cta-row { margin-top: 34px; display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
 .btn { display: inline-block; background: var(--accent); color: #131a2c; font-weight: 600; font-size: .92rem; padding: 13px 24px; border-radius: 6px; }
 .btn:hover, .btn:focus-visible { background: var(--accent-soft); text-decoration: none; }
+/* Dawn text-accent is darkened for AA contrast; the button keeps the bright orange
+   (its dark label carries the contrast there). */
+.dawn .btn { background: #ea7c1f; }
+.dawn .btn:hover, .dawn .btn:focus-visible { background: #fb923c; }
 .link { color: var(--body); border-bottom: 1px solid rgba(251, 146, 60, .4); padding-bottom: 3px; font-size: .92rem; }
 .link:hover { color: var(--text-2); text-decoration: none; }
 
@@ -74,7 +155,7 @@ a.card:hover { border-color: rgba(251, 146, 60, .45); text-decoration: none; }
 /* ---------- Timeline ---------- */
 .timeline { list-style: none; margin-top: 34px; border-left: 2px solid var(--border); }
 .tl-item { display: grid; grid-template-columns: 6rem 1fr; column-gap: 22px; padding: 15px 0 15px 26px; position: relative; }
-.tl-item::before { content: ""; position: absolute; left: -5px; top: 24px; width: 8px; height: 8px; border-radius: 50%; background: #38465e; }
+.tl-item::before { content: ""; position: absolute; left: -5px; top: 24px; width: 8px; height: 8px; border-radius: 50%; background: var(--tl-dot); }
 .tl-year, .tl-title { line-height: 1.45; }
 .tl-year { font-family: var(--mono); font-size: .8rem; color: var(--muted); white-space: nowrap; padding-top: .18em; }
 .tl-title { font-size: 1rem; }
