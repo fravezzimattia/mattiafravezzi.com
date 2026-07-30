@@ -71,7 +71,10 @@ a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3p
    xMaxYMax-slice (glow r60 at 290,590 from bottom-right of the 1440×800 box,
    hero ≈ 88vh), but the top clamp keeps them inside the hero on ultra-wide screens
    where the slice crop would push them above the viewport. */
-.hero-moon, .hero-sun { position: absolute; width: calc(2 * max(4.1667vw, 6.6vh)); aspect-ratio: 1; right: calc(max(20.139vw, 31.9vh) - max(4.1667vw, 6.6vh)); top: max(calc(100% - max(40.972vw, 64.9vh) - max(4.1667vw, 6.6vh)), 60px); background: radial-gradient(circle closest-side, rgba(251, 146, 60, .1) 0 100%, transparent 100%); }
+.hero-moon, .hero-sun { position: absolute; width: calc(2 * max(4.1667vw, 6.6vh)); aspect-ratio: 1; right: calc(min(max(20.139vw, 31.9vh), 28vw) - max(4.1667vw, 6.6vh)); top: max(calc(100% - max(40.972vw, 64.9vh) - max(4.1667vw, 6.6vh)), 60px); background: radial-gradient(circle closest-side, rgba(251, 146, 60, .1) 0 100%, transparent 100%); }
+/* touch-action:manipulation kills mobile double-tap zoom so rapid triple-taps all
+   land as clicks; transparent tap highlight keeps the easter egg invisible. */
+.hero-moon, .hero-sun { touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; }
 .hero-moon svg, .hero-sun svg { position: absolute; inset: 0; margin: auto; width: 43%; height: 43%; }
 .hero-moon svg { opacity: .7; }
 .hero-sun { background: radial-gradient(circle closest-side, rgba(251, 146, 60, .22) 0 100%, transparent 100%); }
