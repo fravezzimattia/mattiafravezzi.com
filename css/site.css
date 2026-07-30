@@ -37,6 +37,11 @@ a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3p
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* Sun lives outside the sliced SVG: same scale/position math as its xMaxYMax-slice
+   (dot r6 + glow r60 at 290,590 from bottom-right of the 1440×800 box, hero ≈ 88vh),
+   but the top clamp keeps it inside the hero on ultra-wide screens where the slice
+   crop would push it above the viewport. */
+.hero-sun { position: absolute; width: calc(2 * max(4.1667vw, 6.6vh)); aspect-ratio: 1; right: calc(max(20.139vw, 31.9vh) - max(4.1667vw, 6.6vh)); top: max(calc(100% - max(40.972vw, 64.9vh) - max(4.1667vw, 6.6vh)), 60px); background: radial-gradient(circle closest-side, #fdba74 0 10%, rgba(251, 146, 60, .1) 10% 100%, transparent 100%); pointer-events: none; }
 .hero .container { position: relative; width: 100%; padding-top: 96px; padding-bottom: 140px; }
 .hero h1 { font-size: clamp(3rem, 9vw, 5.2rem); line-height: .95; }
 .lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); margin-top: 22px; max-width: 480px; }
