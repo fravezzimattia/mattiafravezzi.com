@@ -123,7 +123,11 @@ a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3p
   .dawn-anim .hero-moon, .dawn-anim .hero-sun, .dusk-anim .hero-moon, .dusk-anim .hero-sun { animation: none; }
   .theme-fade, .theme-fade *, .theme-fade svg * { transition: none; }
 }
-.hero .container { position: relative; width: 100%; padding-top: 96px; padding-bottom: 140px; }
+/* The hero container paints above the moon/sun but must not swallow their taps:
+   its transparent box spans the whole hero (full width on mobile), so let events
+   pass through it except on real interactive children. */
+.hero .container { position: relative; width: 100%; padding-top: 96px; padding-bottom: 140px; pointer-events: none; }
+.hero .container a { pointer-events: auto; }
 .hero h1 { font-size: clamp(3rem, 9vw, 5.2rem); line-height: .95; }
 .lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); margin-top: 22px; max-width: 480px; }
 .cta-row { margin-top: 34px; display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
@@ -190,6 +194,8 @@ footer { border-top: 1px solid var(--border); padding: 26px 0; }
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
   .section { padding: 68px 0; }
+  /* High in the corner, clear of the eyebrow/title block. */
+  .hero-moon, .hero-sun { top: 48px; }
   .now-grid { grid-template-columns: 1fr; }
   .portrait { max-width: 220px; }
   .feature-cards, .comm-cards { grid-template-columns: 1fr; }

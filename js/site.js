@@ -27,18 +27,31 @@
       switching = false;
     }, instant ? 0 : 5300);
   }
-  function tripleClick(el, onTriple) {
+  function tripleTap(el, onTriple) {
     if (!el) return;
-    var count = 0, timer;
-    el.addEventListener('click', function () {
+    var count = 0, timer, startX = null, startY = null;
+    el.addEventListener('touchstart', function (e) {
+      var t = e.touches[0];
+      startX = t.clientX; startY = t.clientY;
+    }, { passive: true });
+    function hit(e) {
+      if (e.type === 'touchend') {
+        // Ignore scroll-drags that end on the element; otherwise count the tap
+        // here and suppress the ghost click (and iOS double-tap zoom) ourselves.
+        var t = e.changedTouches[0];
+        if (startX !== null && (Math.abs(t.clientX - startX) > 12 || Math.abs(t.clientY - startY) > 12)) return;
+        e.preventDefault();
+      }
       count++;
       clearTimeout(timer);
       if (count >= 3) { count = 0; onTriple(); return; }
       timer = setTimeout(function () { count = 0; }, 1200);
-    });
+    }
+    el.addEventListener('click', hit);
+    el.addEventListener('touchend', hit, { passive: false });
   }
-  tripleClick(moon, function () { flip(true); });
-  tripleClick(sun, function () { flip(false); });
+  tripleTap(moon, function () { flip(true); });
+  tripleTap(sun, function () { flip(false); });
 
   if (!('IntersectionObserver' in window) ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
